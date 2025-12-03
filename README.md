@@ -142,6 +142,5 @@ Vengan tranquilos, con calma y concentrados:
 
 Si quieren, pueden agregar una imagen inspirada en Pokémon en este README, por ejemplo:
 
-```markdown
 ![Entrenador de e-commerce](https://i.imgflip.com/2w76sl.png)
 
