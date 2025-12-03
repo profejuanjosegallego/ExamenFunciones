@@ -119,3 +119,29 @@ Fórmula sugerida (puede variar según la lógica que definan):
 
 ```text
 totalFinal = subtotal + impuestos - descuento + costoEnvio
+
+---
+
+## 🧢 Modo Pokémon: ¡Entrenadores del e-commerce!
+
+Así como un buen entrenador no entra a un gimnasio Pokémon sin prepararse, ustedes tampoco llegan a este examen sin haber entrenado: ya han practicado funciones, parámetros, retornos y lógica de negocio. 💻⚡
+
+En esta evaluación:
+
+- Cada función que creen es como un nuevo movimiento en la lista de su Pokémon.
+- El e-commerce es su combate.
+- Y el código bien organizado… es su mejor estrategia para ganar la batalla. 💪
+
+Vengan tranquilos, con calma y concentrados:
+- Si algo no compila a la primera, no es un fracaso: es **experiencia**.
+- Si se equivocan, revisan, corrigen y vuelven a intentar: así es como suben de nivel. 🔁✨  
+
+> Recuerden: *“El truco está en no rendirse, seguir entrenando y confiar en lo que ya saben.”*  
+
+### 🎨 Imagen temática (opcional)
+
+Si quieren, pueden agregar una imagen inspirada en Pokémon en este README, por ejemplo:
+
+```markdown
+![Entrenador de e-commerce](https://i.imgflip.com/2w76sl.png)
+
