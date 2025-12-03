@@ -164,15 +164,7 @@ Vengan tranquilos, con calma y concentrados:
 > Recuerden: *“El truco está en no rendirse, seguir entrenando y confiar en lo que ya saben.”*  
 
 ---
-
-### 🎨 Imagen temática (opcional)
-
-Pueden mostrar una imagen inspirada en Pokémon directamente en este README:
-
 ![Entrenador de e-commerce](https://i.imgflip.com/2w76sl.png)
-
-Si desean usar otra imagen, solo deben reemplazar la URL anterior por el enlace de la imagen que quieran utilizar.
-
 ---
 
 ¡Ahora sí, entrenadores del código, es hora de programar! 🚀
