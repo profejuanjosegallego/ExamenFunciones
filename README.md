@@ -117,8 +117,32 @@ Calcular el **total a pagar** por el cliente, usando los resultados de las funci
 
 Fórmula sugerida (puede variar según la lógica que definan):
 
-```text
-totalFinal = subtotal + impuestos - descuento + costoEnvio
+`totalFinal = subtotal + impuestos - descuento + costoEnvio`
+
+---
+
+## Entregables
+
+- Archivo(s) de código con:
+  - Las **5 funciones** claramente identificadas.
+  - Un ejemplo de uso (caso de prueba) donde se:
+    1. Cree una lista de productos.
+    2. Calcule el subtotal.
+    3. Calcule impuestos.
+    4. Calcule descuento.
+    5. Calcule costo de envío.
+    6. Calcule el total final de la compra.
+- Comentarios mínimos que expliquen qué hace cada función.
+
+---
+
+## Criterios de evaluación
+
+- ✔ Correcta implementación de las 5 funciones.
+- ✔ Uso adecuado de parámetros y valores de retorno.
+- ✔ Lógica coherente y ordenada en el flujo de cálculo.
+- ✔ Código legible (nombres de variables y funciones claros).
+- ✔ Caso de prueba funcional que muestre todo el proceso de la compra.
 
 ---
 
@@ -133,14 +157,22 @@ En esta evaluación:
 - Y el código bien organizado… es su mejor estrategia para ganar la batalla. 💪
 
 Vengan tranquilos, con calma y concentrados:
+
 - Si algo no compila a la primera, no es un fracaso: es **experiencia**.
 - Si se equivocan, revisan, corrigen y vuelven a intentar: así es como suben de nivel. 🔁✨  
 
 > Recuerden: *“El truco está en no rendirse, seguir entrenando y confiar en lo que ya saben.”*  
 
+---
+
 ### 🎨 Imagen temática (opcional)
 
-Si quieren, pueden agregar una imagen inspirada en Pokémon en este README, por ejemplo:
+Pueden mostrar una imagen inspirada en Pokémon directamente en este README:
 
 ![Entrenador de e-commerce](https://i.imgflip.com/2w76sl.png)
 
+Si desean usar otra imagen, solo deben reemplazar la URL anterior por el enlace de la imagen que quieran utilizar.
+
+---
+
+¡Ahora sí, entrenadores del código, es hora de programar! 🚀
