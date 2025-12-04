@@ -50,7 +50,33 @@ public class Main {
             // Lo agrego a la lista
             productos.add(producto);
         }
+        // --- Cálculos principales usando funciones ---
 
+        // Subtotal de los productos
+        Double subtotal = calcularSubtotal(productos);
+        System.out.println("\nSubtotal de la compra: " + subtotal);
+
+        // Impuestos
+        System.out.print("\nIngrese el porcentaje de impuesto (%): ");
+        Double porcentajeImpuesto = leerTeclado.nextDouble();
+        Double impuestos = calcularImpuestos(subtotal, porcentajeImpuesto);
+        System.out.println("Impuestos calculados: " + impuestos);
+
+        // Descuento
+        System.out.print("\nIngrese el porcentaje de descuento (%): ");
+        Double porcentajeDescuento = leerTeclado.nextDouble();
+        Double descuento = calcularDescuentos(subtotal, porcentajeDescuento);
+        System.out.println("Descuento aplicado: " + descuento);
+
+        // Envío
+        System.out.print("\nIngrese la distancia del envío (km) ➡: ");
+        Double distancia = leerTeclado.nextDouble();
+        Double costoEnvio = evaluarCostoDistancia(distancia);
+        System.out.println("Costo del envío: " + costoEnvio);
+
+        // Total final
+        Double totalFinal = calcularTotalFinal(subtotal, impuestos, descuento, costoEnvio);
+        System.out.println("\nTOTAL A PAGAR 📦: " + totalFinal);
 
 
 
