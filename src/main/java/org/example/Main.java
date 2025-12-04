@@ -10,9 +10,8 @@ public class Main {
         Scanner leer = new Scanner(System.in);
 
         System.out.println("****** 🛒⭐Tienda Online - Proceso de Compra ****** ⭐🛒");
-        System.out.println("\nSimulando la adición de productos al carrito...");
 
-        // Crear una lista de productos, cada producto es un HashMap
+        // Crear una lista de productos, cada producto es un HashMap- simulando agregar los productos al carrito
         ArrayList<HashMap<String, Object>> carritoDeCompras = new ArrayList<>();
 
         // Producto 1: Camiseta
@@ -30,7 +29,6 @@ public class Main {
         carritoDeCompras.add(productoDos);
 
         // Pedir la distancia (valor que necesitamos)
-        System.out.println("\n💲--- Datos de la transacción ---💲");
         System.out.print("¿Distancia de envío en Km? 🛞: ");
         double distanciaKm = leer.nextDouble();
 
@@ -44,12 +42,30 @@ public class Main {
 
         leer.close();
     }
+     // CREANDO FUNCIONES
 
-
-
-}
-
-
-
+    //Función para calcular el subtotal de la compra
+    public static Double calcular_costo_total_productos(ArrayList<HashMap<String, Object>> productos) {
+        Double subtotal = 0.0;
+        // Recorremos o iteramos cada producto en la lista- es un forEach
+        for (HashMap<String, Object> producto : productos) {
+            // se convierte de un tipo de dato a otro (Double e Integer)
+            Double precio = (Double) producto.get("precioUnitario");
+            Integer cantidad = (Integer) producto.get("cantidad");
+            subtotal += (precio * cantidad); // Sumamos el costo de este producto al total
+        }
+        return subtotal;
     }
+    
+     //Función para aplicar descuentos.
+    public static Double aplicar_descuentos(Double subtotal, Double porcentajeDescuento) {
+        //Descuento = Subtotal * (Descuento / 100)
+        Double valorDescuento = subtotal * (porcentajeDescuento / 100.0);
+        return valorDescuento;
+    }
+
+
 }
+
+
+
