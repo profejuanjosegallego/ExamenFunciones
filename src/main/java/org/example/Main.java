@@ -52,6 +52,8 @@ public class Main {
         }
 
 
+       
+
     }
 
     // Función para calcular el subtotal (precio * cantidad)
@@ -75,5 +77,23 @@ public class Main {
         return impuesto;
     }
 
-   
+    // Función para calcular descuentos
+    public static Double calcularDescuentos(Double subtotal, Double porcentaje) {
+        Double descuento = (subtotal * porcentaje) / 100;
+        return descuento;
+    }
+
+    // Función para evaluar el costo del envío según la distancia
+    public static Double evaluarCostoDistancia(Double distancia) {
+
+        if (distancia <= 5) {
+            return 5000.0; // Envío económico
+        } else if (distancia <= 20) {
+            return 12000.0; // Envío medio
+        } else {
+            return 20000.0; // Envío largo
+        }
+    }
+
+
 }
