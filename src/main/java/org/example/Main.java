@@ -14,6 +14,10 @@ public class Main {
 
         Scanner leer = new Scanner(System.in);
 
+        System.out.print("Ingrese la distancia a la que se encuentra en Km: ");
+        Double distancia = leer.nextDouble();
+        leer.nextLine();
+
 
         ArrayList<HashMap<String,Object>> productos = new ArrayList<>();
 
@@ -52,6 +56,10 @@ public class Main {
         Double descuentoSubtotal= calcular_descuento_subtototal(subtotal);
         System.out.println(descuentoSubtotal);
 
+        System.out.println("Este es el costo de su envio");
+        Double costoEnvio=calcular_valor_distancia(distancia);
+        System.out.println(costoEnvio);
+
 
 
 
@@ -83,7 +91,18 @@ public class Main {
         Double descuentoSubtotal=subtotal * descuento;
         return descuentoSubtotal;
     }
-    
+
+    public static Double calcular_valor_distancia(Double distancia) {
+        Double costoEnvio=0.0;
+        if (distancia <= 5) {
+            costoEnvio=5000.0;
+        } else if (distancia > 5 && distancia<=20) {
+            costoEnvio=10000.0;
+        }else {
+            costoEnvio=20000.0;
+        }
+        return costoEnvio;
+    }
 
 
 }
