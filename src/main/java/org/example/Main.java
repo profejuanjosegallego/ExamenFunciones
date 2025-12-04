@@ -23,10 +23,10 @@ public class Main {
 
             HashMap<String, Object> producto = new HashMap<>();
 
-            System.out.println("Ingrese el nombre de el producto: ");
+            System.out.println("Ingrese el nombre del producto: ");
             producto.put("nombreProducto", leer.nextLine());
 
-            System.out.println("Ingrese el precio el del producto: ");
+            System.out.println("Ingrese el precio del producto: ");
             producto.put("precioUnitarioProducto", leer.nextInt());
 
             System.out.println("Ingrese la cantidad que desea comprar: ");
@@ -40,11 +40,17 @@ public class Main {
             productos.add(producto);
 
         }
+        System.out.println("Este es el subtotal");
         Double subtotal = calcular_subtotal_compra(productos);
-
         System.out.println(subtotal);
 
-        
+        System.out.println("Este es el impuesto de su compra");
+        Double impuestoSubtotal=calcular_impuesto_subtotal(subtotal);
+        System.out.println(impuestoSubtotal);
+
+        System.out.println("Este es el descuento de su compra");
+        Double descuentoSubtotal= calcular_descuento_subtototal(subtotal);
+        System.out.println(descuentoSubtotal);
 
 
 
@@ -64,6 +70,20 @@ public class Main {
 
         return subtotal;
     }
+
+    public static Double calcular_impuesto_subtotal(Double subtotal) {
+        Double impuesto = 0.19;
+        Double impuestoSubtotal= subtotal * impuesto;
+        return impuestoSubtotal;
+
+    }
+
+    public static Double calcular_descuento_subtototal(Double subtotal) {
+        Double descuento = 0.10;
+        Double descuentoSubtotal=subtotal * descuento;
+        return descuentoSubtotal;
+    }
+    
 
 
 }
