@@ -60,6 +60,10 @@ public class Main {
         Double costoEnvio=calcular_valor_distancia(distancia);
         System.out.println(costoEnvio);
 
+        System.out.println("Este es el costo total de su pedido");
+        Double costoTotal=calcular_valor_total(subtotal,impuestoSubtotal,descuentoSubtotal,costoEnvio);
+        System.out.println(costoTotal);
+
 
 
 
@@ -102,6 +106,11 @@ public class Main {
             costoEnvio=20000.0;
         }
         return costoEnvio;
+    }
+
+    public static Double calcular_valor_total (Double subtotal,Double impuestoSubtotal,Double descuentoSubtotal,Double costoEnvio) {
+        Double costoTotal=subtotal+impuestoSubtotal-descuentoSubtotal+costoEnvio;
+        return costoTotal;
     }
 
 
