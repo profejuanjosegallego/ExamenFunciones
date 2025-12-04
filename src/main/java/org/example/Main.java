@@ -52,7 +52,27 @@ public class Main {
         }
 
     }
+
+    // Función para calcular el subtotal (precio * cantidad)
+    public static Double calcularSubtotal(ArrayList<HashMap<String, Object>> listaProductos) {
+
+        Double subtotal = 0.0;
+
+        for (HashMap<String, Object> producto : listaProductos) {
+            Double precio = (Double) producto.get("precioUnitario");
+            Integer cantidad = (Integer) producto.get("cantidad");
+
+            subtotal += precio * cantidad; // Sumo al subtotal
+        }
+
+        return subtotal;
+    }
 }
+
+
+
+
+
 
 
 
