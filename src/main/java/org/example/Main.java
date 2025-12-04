@@ -1,3 +1,7 @@
+//Juan Camilo Valencia Martinez
+//Santiago Posada
+
+
 package org.example;
 
 import java.util.Scanner;
