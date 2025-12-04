@@ -69,16 +69,25 @@ public class Main {
                     break;
 
                 case 2:
-                    double totalBase = calcular_costo_venta(productos);
-                    double impuestos = calcular_impuestos(totalBase);
+                    double totalBaseImpuestos = calcular_costo_venta(productos);
+                    double impuestos = calcular_impuestos(totalBaseImpuestos);
 
                     System.out.println(azul + "\n📌 Aplicando impuestos del 19%..." + negro);
-                    System.out.println("Subtotal: $" + totalBase);
+                    System.out.println("Subtotal: $" + totalBaseImpuestos);
                     System.out.println("Impuestos (19%): $" + impuestos);
-                    System.out.println(morado + "Total con impuestos: $" + (totalBase + impuestos) + negro);
+                    System.out.println(morado + "Total con impuestos: $" + (totalBaseImpuestos + impuestos) + negro);
                     break;
 
-                case 5:
+                case 3:
+                    double totalBaseDescuentos = calcular_costo_venta(productos);
+                    double descuentos = calcular_descuento(totalBaseDescuentos);
+
+                    System.out.println(azul + "\n💳 Aplicando descuento del 15%..." + negro);
+                    System.out.println("Subtotal: $" + totalBaseDescuentos);
+                    System.out.println("Impuestos (19%): $" + descuentos);
+                    System.out.println(morado + "Total con descuento: $" + (totalBaseDescuentos + descuentos) + negro);
+
+                case 6:
                     continuar = 0;
                     break;
 
@@ -110,5 +119,13 @@ public class Main {
         // esta funcion es parta calcular los impuestos
 
         return totalCompra * 0.19;
+    }
+
+    public static Double calcular_descuento(Double totalCompra){
+
+
+        // esta funcion es para calcular los descuentos
+
+        return  totalCompra * 0.15;
     }
 }
