@@ -56,12 +56,35 @@ public class Main {
         }
         return subtotal;
     }
-    
-     //Función para aplicar descuentos.
+     //Función para aplicar descuentos
     public static Double aplicar_descuentos(Double subtotal, Double porcentajeDescuento) {
         //Descuento = Subtotal * (Descuento / 100)
         Double valorDescuento = subtotal * (porcentajeDescuento / 100.0);
         return valorDescuento;
+    }
+
+     // Función para aplicar impuestos (IVA)
+    public static Double aplicar_impuestos(Double subtotal, Double porcentajeImpuesto) {
+        //  Subtotal * (Impuesto / 100)
+        Double valorImpuesto = subtotal * (porcentajeImpuesto / 100.0);
+        return valorImpuesto;
+    }
+     //Función para calcular el costo de envío según la distancia.
+
+    public static Double calcular_costo_envio(Double distanciaEnKm) {
+        Double costoEnvio = 0.0;
+        //si la distancia es <= 5.0 ---> 5.000
+        //si la distancia es > 5.0 y la distancia es <= 20.0 ---> 12.000
+        if (distanciaEnKm <= 5.0) {
+            costoEnvio = 5000.0;
+        } else if (distanciaEnKm > 5.0 && distanciaEnKm <= 20.0) {
+            costoEnvio = 12000.0;
+        } else { // Si es mayor a 20 km
+            // Tarifa por Km: 1.000 por cada Km extra después de los 20
+            double kmExtra = distanciaEnKm - 20.0;
+            costoEnvio = 15000.0 + (kmExtra * 1000.0); // Tarifa base + extra
+        }
+        return costoEnvio;
     }
 
 
