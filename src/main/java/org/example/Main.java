@@ -25,7 +25,34 @@ public class Main {
         System.out.print("¿Cuántos productos desea registrar?: ");
         Integer cantidadProductosLista = leerTeclado.nextInt();
         leerTeclado.nextLine(); // Limpia buffer
+
+        // Ciclo para agregar productos
+        for (int i = 0; i < cantidadProductosLista; i++) {
+
+            System.out.println("\nProducto #" + (i + 1));
+
+            System.out.print("Ingrese el nombre del producto: ");
+            String nombreProducto = leerTeclado.nextLine();
+
+            System.out.print("Ingrese el precio unitario: ");
+            Double precioUnitario = leerTeclado.nextDouble();
+
+            System.out.print("Ingrese la cantidad: ");
+            Integer cantidad = leerTeclado.nextInt();
+            leerTeclado.nextLine();
+
+            // Creo el diccionario del producto
+            HashMap<String, Object> producto = new HashMap<>();
+            producto.put("nombre", nombreProducto);
+            producto.put("precioUnitario", precioUnitario);
+            producto.put("cantidad", cantidad);
+
+            // Lo agrego a la lista
+            productos.add(producto);
+        }
+
     }
 }
+
 
 
