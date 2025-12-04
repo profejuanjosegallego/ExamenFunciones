@@ -138,6 +138,9 @@ public class Main {
                     System.out.println(rojo + "\n🛑 ¡¡Opcion ingresada no valida!! 🛑" + negro);
             }
         }
+
+        System.out.println("Este codigo fue realizado por" + verde + "Andrey Monsalev Villa" + negro + "&" + azul + "Juan David Arenas Cardenas");
+        // Este codigo fue realizado por Andrey Monsalev Villa & Juan David Arenas Cardenas
     }
 
     public static Double calcular_costo_venta(ArrayList<HashMap<String,Object>> productos){
