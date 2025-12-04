@@ -51,6 +51,7 @@ public class Main {
             productos.add(producto);
         }
 
+
     }
 
     // Función para calcular el subtotal (precio * cantidad)
@@ -67,12 +68,12 @@ public class Main {
 
         return subtotal;
     }
+
+    // Función para calcular impuestos
+    public static Double calcularImpuestos(Double subtotal, Double porcentaje) {
+        Double impuesto = (subtotal * porcentaje) / 100;
+        return impuesto;
+    }
+
+   
 }
-
-
-
-
-
-
-
-
