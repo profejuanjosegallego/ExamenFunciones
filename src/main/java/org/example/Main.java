@@ -87,6 +87,12 @@ public class Main {
         return costoEnvio;
     }
 
+     //Función para calcular el total final de la compra
+
+    public static Double calcular_total_final(Double subtotal, Double impuestos, Double descuento, Double costoEnvio) {
+        // Sumamos, restamos el descuento, y sumamos el envío
+        return subtotal + impuestos - descuento + costoEnvio;
+    }
 
 }
 
