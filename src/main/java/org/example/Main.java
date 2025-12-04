@@ -84,22 +84,49 @@ public class Main {
 
                     System.out.println(azul + "\n💳 Aplicando descuento del 15%..." + negro);
                     System.out.println("Subtotal: $" + totalBaseDescuentos);
-                    System.out.println("Impuestos (19%): $" + descuentos);
+                    System.out.println("descuento (15%): $" + descuentos);
                     System.out.println(morado + "Total con descuento: $" + (totalBaseDescuentos - descuentos) + negro);
 
                     break;
 
                 case 4:
-                    System.out.print(azul + "Ingrese la distancia en kilometros a la cual se realizara el envio 🗺️: " + negro);
+                    System.out.print(azul + "\nIngrese la distancia en kilometros a la cual se realizara el envio 🗺️: " + negro);
                     Integer distanciaEnvio = leer.nextInt();
 
                     double totalBaseEnvio = calcular_costo_venta(productos);
                     double costoEnvio = calcular_costo_envio(distanciaEnvio);
 
-                    System.out.println(azul + "\n💳 Aplicando costos de envio..." + negro);
+                    System.out.println(azul + "\n🗺️ Aplicando costos de envio..." + negro);
                     System.out.println("Subtotal: $" + totalBaseEnvio);
                     System.out.println("Costo de Envio: $" + costoEnvio);
                     System.out.println(morado + "Total con descuento: $" + (totalBaseEnvio + costoEnvio) + negro);
+
+                    break;
+
+                case 5:
+
+                    double totalBaseFinal = calcular_costo_venta(productos);
+                    double impuestosFinal = calcular_impuestos(totalBaseFinal);
+                    double descuentosFinal = calcular_descuento(totalBaseFinal);
+
+                    System.out.print(azul + "\nConfirma la distancia en kilometros para calcular el envío 🗺️: " + negro);
+                    int distanciaFinalEnvio = leer.nextInt();
+
+                    double costoEnvioFinal = calcular_costo_envio(distanciaFinalEnvio);
+
+                    double totalFinalCompra = calcular_total_final_compra(
+                            totalBaseFinal,
+                            impuestosFinal,
+                            descuentosFinal,
+                            costoEnvioFinal
+                    );
+
+                    System.out.println(azul + "\n📦 --- RESUMEN TOTAL FINAL ---" + negro);
+                    System.out.println("Subtotal de la compra: $" + totalBaseFinal);
+                    System.out.println("Impuestos (19%): $" + impuestosFinal);
+                    System.out.println("Descuento (15%): -$" + descuentosFinal);
+                    System.out.println("Costo de envío: $" + costoEnvioFinal);
+                    System.out.println(morado + "\n💰 TOTAL A PAGAR: $" + totalFinalCompra + negro);
 
                     break;
 
@@ -159,5 +186,13 @@ public class Main {
         }
 
         return costoEnvio;
+    }
+
+    public static Double calcular_total_final_compra(Double totalCompra, Double impuestos, Double descuentos, Double costoEnvio){
+
+        // Esta funcion calcula el total de la compra
+
+        return totalCompra - descuentos + impuestos + costoEnvio;
+
     }
 }
