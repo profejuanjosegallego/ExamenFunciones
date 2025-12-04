@@ -52,7 +52,7 @@ public class Main {
         }
 
 
-       
+
 
     }
 
@@ -93,6 +93,9 @@ public class Main {
         } else {
             return 20000.0; // Envío largo
         }
+    }
+    public static Double calcularTotalFinal(Double subtotal, Double impuesto, Double descuento, Double envio) {
+        return subtotal + impuesto - descuento + envio;
     }
 
 
