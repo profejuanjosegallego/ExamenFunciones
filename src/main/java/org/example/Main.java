@@ -85,7 +85,23 @@ public class Main {
                     System.out.println(azul + "\n💳 Aplicando descuento del 15%..." + negro);
                     System.out.println("Subtotal: $" + totalBaseDescuentos);
                     System.out.println("Impuestos (19%): $" + descuentos);
-                    System.out.println(morado + "Total con descuento: $" + (totalBaseDescuentos + descuentos) + negro);
+                    System.out.println(morado + "Total con descuento: $" + (totalBaseDescuentos - descuentos) + negro);
+
+                    break;
+
+                case 4:
+                    System.out.print(azul + "Ingrese la distancia en kilometros a la cual se realizara el envio 🗺️: " + negro);
+                    Integer distanciaEnvio = leer.nextInt();
+
+                    double totalBaseEnvio = calcular_costo_venta(productos);
+                    double costoEnvio = calcular_costo_envio(distanciaEnvio);
+
+                    System.out.println(azul + "\n💳 Aplicando costos de envio..." + negro);
+                    System.out.println("Subtotal: $" + totalBaseEnvio);
+                    System.out.println("Costo de Envio: $" + costoEnvio);
+                    System.out.println(morado + "Total con descuento: $" + (totalBaseEnvio + costoEnvio) + negro);
+
+                    break;
 
                 case 6:
                     continuar = 0;
@@ -127,5 +143,21 @@ public class Main {
         // esta funcion es para calcular los descuentos
 
         return  totalCompra * 0.15;
+    }
+    public static Double calcular_costo_envio(Integer distanciaEnvio){
+
+        // esta funcion calcula los costes de envio segun la distancia
+
+        Double costoEnvio = 0.0;
+
+        if (distanciaEnvio <= 5){
+            costoEnvio = 20000.0;
+        } else if (distanciaEnvio <= 30) {
+            costoEnvio = 30000.0;
+        } else {
+            costoEnvio = 50000.0;
+        }
+
+        return costoEnvio;
     }
 }
